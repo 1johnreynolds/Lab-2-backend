@@ -8,19 +8,18 @@ package router
 import play.core.routing._
 import play.core.routing.HandlerInvokerFactory._
 import play.core.j._
-
 import play.api.mvc._
-
 import _root_.controllers.Assets.Asset
 import _root_.play.libs.F
+import controllers.PubController
 
 class Routes(
-  override val errorHandler: play.api.http.HttpErrorHandler, 
-  // @LINE:6
-  HomeController_0: controllers.HomeController,
-  // @LINE:9
-  UserController_1: controllers.UserController,
-  val prefix: String
+              override val errorHandler: play.api.http.HttpErrorHandler,
+              // @LINE:6
+              HomeController_0: controllers.HomeController,
+              // @LINE:9
+              UserController_1: PubController,
+              val prefix: String
 ) extends GeneratedRouter {
 
    @javax.inject.Inject()
@@ -28,7 +27,7 @@ class Routes(
     // @LINE:6
     HomeController_0: controllers.HomeController,
     // @LINE:9
-    UserController_1: controllers.UserController
+    UserController_1: PubController
   ) = this(errorHandler, HomeController_0, UserController_1, "/")
 
   import ReverseRouteContext.empty

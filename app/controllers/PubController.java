@@ -14,13 +14,14 @@ import play.mvc.Result;
  * @create: 2019-11-16 15:15
  */
 
-public class UserController extends Controller {
+public class PubController extends Controller {
 
     public Result authenticate() {
 
         System.out.println("In authenticate");
         JsonNode req = request().body().asJson();
         String title = req.get("Title").asText();
+
 
 
         try {
