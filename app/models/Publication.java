@@ -11,7 +11,7 @@ public class Publication extends Model {
     private static final long serialVersionUID = 1L;
 
     @Id
-    public Long id;
+    public Long Id;
 
     @Constraints.Required
     public String Title;

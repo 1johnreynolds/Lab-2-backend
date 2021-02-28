@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/c18jo/IdeaProjects/Lab-2-Pub/ebean-backend/conf/routes
-// @DATE:Sun Feb 28 09:29:44 MST 2021
+// @DATE:Sun Feb 28 10:21:52 MST 2021
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -36,7 +36,7 @@ package controllers.javascript {
   }
 
   // @LINE:9
-  class ReverseUserController(_prefix: => String) {
+  class ReversePubController(_prefix: => String) {
 
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
@@ -45,7 +45,7 @@ package controllers.javascript {
   
     // @LINE:9
     def authenticate: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.UserController.authenticate",
+      "controllers.PubController.authenticate",
       """
         function() {
           return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})

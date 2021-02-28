@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/c18jo/IdeaProjects/Lab-2-Pub/ebean-backend/conf/routes
-// @DATE:Sun Feb 28 09:29:44 MST 2021
+// @DATE:Sun Feb 28 10:21:52 MST 2021
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -29,7 +29,7 @@ package controllers {
   }
 
   // @LINE:9
-  class ReverseUserController(_prefix: => String) {
+  class ReversePubController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
