@@ -3,12 +3,6 @@
 
 # --- !Ups
 
-create table publication (
-  id                            bigint auto_increment not null,
-  title                         varchar(255),
-  constraint pk_publication primary key (id)
-);
-
 create table user (
   id                            bigint auto_increment not null,
   username                      varchar(255),
@@ -18,8 +12,6 @@ create table user (
 
 
 # --- !Downs
-
-drop table if exists publication;
 
 drop table if exists user;
 

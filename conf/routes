@@ -6,7 +6,9 @@
 GET     /                           controllers.HomeController.index
 
 #Login
-POST     /login                      controllers.PubController.authenticate()
+POST     /login                      controllers.UserController.authenticate()
 
 
+# Add User  {"name":name, "password":password}
+POST    /signup                      controllers.UserController.registerNew()
 
