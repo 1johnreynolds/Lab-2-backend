@@ -38,7 +38,7 @@ public class PubController extends Controller {
         JsonNode req = request().body().asJson();
         String title = req.get("Title").asText();
         Publication pub = Publication.findByName(title);
-        return ok("ID: " + String.valueOf(pub.Id) + "Title: " + pub.Title);
+        return ok(String.valueOf(pub.Id), pub.Title);
     }
 
 }
