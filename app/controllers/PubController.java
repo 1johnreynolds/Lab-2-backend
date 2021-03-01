@@ -1,9 +1,7 @@
 package controllers;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import models.Publication;
-import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 
@@ -22,10 +20,8 @@ public class PubController extends Controller {
         JsonNode req = request().body().asJson();
         String title = req.get("Title").asText();
 
-
-
         try {
-            Publication pub = Publication.findByName(title); // ( match where username and password both match )
+            Publication pub = Publication.findByName(title); // ( match where Title matches )
             if(pub!=null && title.equals(pub.Title)){
                 return ok("true");
             }else{
@@ -36,6 +32,13 @@ public class PubController extends Controller {
             return ok("false");
         }
 
+    }
+
+    public Result showID(){
+        JsonNode req = request().body().asJson();
+        String title = req.get("Title").asText();
+        Publication pub = Publication.findByName(title);
+        return ok("ID: " + String.valueOf(pub.Id) + "Title: " + pub.Title);
     }
 
 }

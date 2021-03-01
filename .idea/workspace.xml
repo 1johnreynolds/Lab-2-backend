@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ffa6d230-5926-407e-983e-789957ec3281" name="Default Changelist" comment="Updated naming of class.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Publication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Publication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/PubController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/PubController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/routes" beforeDir="false" afterPath="$PROJECT_DIR$/conf/routes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/application.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/application.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala" afterDir="false" />
@@ -87,7 +88,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../BookStore-App-In-Play-master" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -97,17 +98,6 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Backend Test" type="Play2FrameworkRunConfigurations" factoryName="Play 2 App" show_console_on_std_err="false" show_console_on_std_out="false">
       <module name="ebean-backend" />
       <option name="allowRunningInParallel" value="false" />
@@ -166,7 +156,9 @@
       <workItem from="1580981217579" duration="4152000" />
       <workItem from="1580996611786" duration="1643000" />
       <workItem from="1614476695360" duration="68000" />
-      <workItem from="1614528756586" duration="5834000" />
+      <workItem from="1614528756586" duration="6112000" />
+      <workItem from="1614618098077" duration="124000" />
+      <workItem from="1614618272678" duration="4888000" />
     </task>
     <task id="LOCAL-00001" summary="Updated naming of class.">
       <created>1614532894382</created>
@@ -175,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614532894382</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updated naming of class.">
+      <created>1614534858647</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1614534858647</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,12 +189,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/controllers/PubController.java</url>
-          <line>20</line>
+          <line>18</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/controllers/PubController.java</url>
-          <line>27</line>
+          <line>23</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>

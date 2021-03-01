@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/c18jo/IdeaProjects/Lab-2-Pub/ebean-backend/conf/routes
-// @DATE:Sun Feb 28 10:21:52 MST 2021
+// @DATE:Mon Mar 01 11:46:45 MST 2021
 
 package controllers;
 

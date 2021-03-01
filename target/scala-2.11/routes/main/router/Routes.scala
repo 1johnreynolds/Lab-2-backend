@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/c18jo/IdeaProjects/Lab-2-Pub/ebean-backend/conf/routes
-// @DATE:Sun Feb 28 10:21:52 MST 2021
+// @DATE:Mon Mar 01 11:46:45 MST 2021
 
 package router
 
@@ -18,7 +18,7 @@ class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:6
   HomeController_0: controllers.HomeController,
-  // @LINE:9
+  // @LINE:8
   PubController_1: controllers.PubController,
   val prefix: String
 ) extends GeneratedRouter {
@@ -27,7 +27,7 @@ class Routes(
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:6
     HomeController_0: controllers.HomeController,
-    // @LINE:9
+    // @LINE:8
     PubController_1: controllers.PubController
   ) = this(errorHandler, HomeController_0, PubController_1, "/")
 
@@ -44,7 +44,7 @@ class Routes(
 
   def documentation = List(
     ("""GET""", this.prefix, """controllers.HomeController.index"""),
-    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.PubController.authenticate()"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.PubController.showID()"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -69,19 +69,19 @@ class Routes(
     )
   )
 
-  // @LINE:9
-  private[this] lazy val controllers_PubController_authenticate1_route = Route("POST",
+  // @LINE:8
+  private[this] lazy val controllers_PubController_showID1_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("login")))
   )
-  private[this] lazy val controllers_PubController_authenticate1_invoker = createInvoker(
-    PubController_1.authenticate(),
+  private[this] lazy val controllers_PubController_showID1_invoker = createInvoker(
+    PubController_1.showID(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.PubController",
-      "authenticate",
+      "showID",
       Nil,
       "POST",
-      """Login""",
+      """""",
       this.prefix + """login"""
     )
   )
@@ -95,10 +95,10 @@ class Routes(
         controllers_HomeController_index0_invoker.call(HomeController_0.index)
       }
   
-    // @LINE:9
-    case controllers_PubController_authenticate1_route(params) =>
+    // @LINE:8
+    case controllers_PubController_showID1_route(params) =>
       call { 
-        controllers_PubController_authenticate1_invoker.call(PubController_1.authenticate())
+        controllers_PubController_showID1_invoker.call(PubController_1.showID())
       }
   }
 }
