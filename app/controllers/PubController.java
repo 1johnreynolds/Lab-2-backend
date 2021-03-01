@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import models.Publication;
 import play.mvc.Controller;
 import play.mvc.Result;
+import play.twirl.api.Content;
 
 
 /**
@@ -38,7 +39,7 @@ public class PubController extends Controller {
         JsonNode req = request().body().asJson();
         String title = req.get("Title").asText();
         Publication pub = Publication.findByName(title);
-        return ok(String.valueOf(pub.Id), pub.Title);
+        return ok(String.valueOf(pub.Id));
     }
 
 }
