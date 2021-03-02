@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/Users/c18jo/IdeaProjects/Lab-2-Pub/ebean-backend/conf/routes
-// @DATE:Sun Feb 28 10:21:52 MST 2021
+// @SOURCE:/Users/beichenhu/Desktop/Service-Oriented Computing /Lab2/Back/Lab-2-backend/conf/routes
+// @DATE:Mon Mar 01 22:49:11 CST 2021
 
 package router
 
@@ -18,7 +18,7 @@ class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:6
   HomeController_0: controllers.HomeController,
-  // @LINE:9
+  // @LINE:12
   PubController_1: controllers.PubController,
   val prefix: String
 ) extends GeneratedRouter {
@@ -27,7 +27,7 @@ class Routes(
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:6
     HomeController_0: controllers.HomeController,
-    // @LINE:9
+    // @LINE:12
     PubController_1: controllers.PubController
   ) = this(errorHandler, HomeController_0, PubController_1, "/")
 
@@ -44,7 +44,8 @@ class Routes(
 
   def documentation = List(
     ("""GET""", this.prefix, """controllers.HomeController.index"""),
-    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.PubController.authenticate()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """findAll""", """controllers.PubController.findAll()"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """query1Response""", """controllers.PubController.authenticate()"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -69,11 +70,28 @@ class Routes(
     )
   )
 
-  // @LINE:9
-  private[this] lazy val controllers_PubController_authenticate1_route = Route("POST",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("login")))
+  // @LINE:12
+  private[this] lazy val controllers_PubController_findAll1_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("findAll")))
   )
-  private[this] lazy val controllers_PubController_authenticate1_invoker = createInvoker(
+  private[this] lazy val controllers_PubController_findAll1_invoker = createInvoker(
+    PubController_1.findAll(),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.PubController",
+      "findAll",
+      Nil,
+      "GET",
+      """ An example controller showing a sample home page""",
+      this.prefix + """findAll"""
+    )
+  )
+
+  // @LINE:15
+  private[this] lazy val controllers_PubController_authenticate2_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("query1Response")))
+  )
+  private[this] lazy val controllers_PubController_authenticate2_invoker = createInvoker(
     PubController_1.authenticate(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -81,8 +99,8 @@ class Routes(
       "authenticate",
       Nil,
       "POST",
-      """Login""",
-      this.prefix + """login"""
+      """ An example controller showing a sample home page""",
+      this.prefix + """query1Response"""
     )
   )
 
@@ -95,10 +113,16 @@ class Routes(
         controllers_HomeController_index0_invoker.call(HomeController_0.index)
       }
   
-    // @LINE:9
-    case controllers_PubController_authenticate1_route(params) =>
+    // @LINE:12
+    case controllers_PubController_findAll1_route(params) =>
       call { 
-        controllers_PubController_authenticate1_invoker.call(PubController_1.authenticate())
+        controllers_PubController_findAll1_invoker.call(PubController_1.findAll())
+      }
+  
+    // @LINE:15
+    case controllers_PubController_authenticate2_route(params) =>
+      call { 
+        controllers_PubController_authenticate2_invoker.call(PubController_1.authenticate())
       }
   }
 }

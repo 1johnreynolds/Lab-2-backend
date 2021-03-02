@@ -4,22 +4,14 @@
 # --- !Ups
 
 create table publication (
-  id                            bigint auto_increment not null,
+  pid                           bigint auto_increment not null,
   title                         varchar(255),
-  constraint pk_publication primary key (id)
-);
-
-create table user (
-  id                            bigint auto_increment not null,
-  username                      varchar(255),
-  password                      varchar(255),
-  constraint pk_user primary key (id)
+  metadata                      varchar(255),
+  constraint pk_publication primary key (pid)
 );
 
 
 # --- !Downs
 
 drop table if exists publication;
-
-drop table if exists user;
 

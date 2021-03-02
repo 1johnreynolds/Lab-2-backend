@@ -6,7 +6,13 @@
 GET     /                           controllers.HomeController.index
 
 #Login
-POST     /login                      controllers.PubController.authenticate()
+#POST    /login                      controllers.PubController.authenticate()
+
+# An example controller showing a sample home page
+GET     /findAll                    controllers.PubController.findAll()
+
+# An example controller showing a sample home page
+POST     /query1Response                    controllers.PubController.authenticate()
 
 
 
