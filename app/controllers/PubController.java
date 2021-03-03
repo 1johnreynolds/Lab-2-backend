@@ -22,14 +22,14 @@ import java.util.List;
 
 public class PubController extends Controller {
 
-    public Result authenticate() {
+    public Result partOneQueryOne() {
 
-        System.out.println("In authenticate");
+        System.out.println("In PartOneQueryOne");
         JsonNode req = request().body().asJson();
-        String title = req.get("Title").asText();
+        String title = req.get("title").asText();
         System.out.println("receive title"+title);
         try {
-            List<SqlRow> pub = pub_info.findByTitle(title); // ( match where username and password both match )
+            List<SqlRow> pub = pub_info.findByTitle_1_1(title); // ( match where username and password both match )
             System.out.println(pub.get(0)!= null);
             //System.out.println(pub.book_title);
             //ObjectNode reslist= Json.newObject();
@@ -86,6 +86,144 @@ public class PubController extends Controller {
                     System.out.println(reslist.toString());
                     return ok("null");
                 }
+        }
+        catch (Exception e) {
+            return ok("false");
+        }
+    }
+
+    public Result partOneQueryTwo() {
+
+        System.out.println("In PartOneQueryTwo");
+        JsonNode req = request().body().asJson();
+        String title = req.get("journal").asText();
+        int volume = req.get("volume").asInt();
+        int number = req.get("pub_number").asInt();
+        System.out.println("receive title"+title);
+        System.out.println("receive volume"+volume);
+        System.out.println("receive number"+number);
+        try {
+            List<SqlRow> pub = pub_info.findByJournal_1_2(title,volume,number); // ( match where username and password both match )
+            System.out.println(pub.get(0)!= null);
+            //System.out.println(pub.book_title);
+            //ObjectNode reslist= Json.newObject();
+            List<ObjectNode> reslist= new ArrayList<>();
+
+            if (pub.get(0)!= null) {
+                int i=0;
+                for (SqlRow pubs : pub) {
+                    i++;
+                    ObjectNode res = Json.newObject();
+                    res.put("title", (String)pubs.get("title"));
+                    res.put("mdate", (String)pubs.get("mdate"));
+                    res.put("author_list", pubs.get("author_list").toString());
+                    res.put("article_key",(String) pubs.get("article_key"));
+                    res.put("editors",(String)pubs.get("editors"));
+                    res.put("pages", (String)pubs.get("pages"));
+                    res.put("ee", (String)pubs.get("ee"));
+                    res.put("pub_url", (String)pubs.get("pub_url"));
+                    res.put("journal", (String)pubs.get("journal"));
+                    res.put("pub_year", pubs.get("pub_year").toString());
+                    res.put("volume", pubs.get("volume").toString());
+                    res.put("pub_number",pubs.get("pub_number").toString());
+                    System.out.println(res);
+//                      reslist.put(Integer.toString(i),res.toString());
+                    reslist.add(res);
+                }
+                System.out.println(reslist);
+                return ok(reslist.toString());
+            } else {
+                System.out.println(reslist.toString());
+                return ok("null");
+            }
+        }
+        catch (Exception e) {
+            return ok("false");
+        }
+    }
+
+    public Result partOneQueryThree() {
+
+        System.out.println("In PartOneQueryThree");
+        JsonNode req = request().body().asJson();
+        String author = req.get("author").asText();
+        System.out.println(req);
+        int pub_year = req.get("pub_year").asInt();
+        System.out.println("receive reasearcher name = "+author);
+        System.out.println("pub_year = "+pub_year);
+        try {
+            List<SqlRow> pub = pub_info.findByTitle_1_3(author,pub_year); // ( match where username and password both match )
+            System.out.println(pub.get(0)!= null);
+            //System.out.println(pub.book_title);
+            //ObjectNode reslist= Json.newObject();
+            List<ObjectNode> reslist= new ArrayList<>();
+
+            if (pub.get(0)!= null) {
+                int i=0;
+                for (SqlRow pubs : pub) {
+                    i++;
+                    ObjectNode res = Json.newObject();
+                    res.put("title", (String)pubs.get("title"));
+                    System.out.println(res);
+//                      reslist.put(Integer.toString(i),res.toString());
+                    reslist.add(res);
+                }
+                System.out.println(reslist);
+                return ok(reslist.toString());
+            } else {
+                System.out.println(reslist.toString());
+                return ok("null");
+            }
+        }
+        catch (Exception e) {
+            return ok("false");
+        }
+    }
+
+    public Result partOneQueryFour() {
+
+        System.out.println("In PartOneQueryFour");
+        try {
+            List<SqlRow> pub = pub_info.findByAuthor_1_4(); // ( match where username and password both match )
+            System.out.println(pub.get(0)!= null);
+            //System.out.println(pub.book_title);
+            //ObjectNode reslist= Json.newObject();
+            List<ObjectNode> reslist= new ArrayList<>();
+
+            if (pub.get(0)!= null) {
+                int i=0;
+                for (SqlRow pubs : pub) {
+                    i++;
+                    ObjectNode res = Json.newObject();
+                    res.put("author",(String) pubs.get("author"));
+
+//                        res.put("title", pubs.title);
+//                        res.put("mdate", pubs.mdate);
+//                        res.put("author", pubs.author);
+//                        res.put("author_list", pubs.author_list);
+//                        res.put("article_key", pubs.article_key);
+//                        res.put("editor", pubs.editors);
+//                        res.put("pages", pubs.pages);
+//                        res.put("ee", pubs.ee);
+//                        res.put("pub_url", pubs.pub_url);
+//                        res.put("journal", pubs.journal);
+//                        res.put("book_title", pubs.book_title);
+//                        res.put("volume", pubs.volume);
+//                        res.put("pub_number", pubs.pub_number);
+//                        res.put("publisher", pubs.publisher);
+//                        res.put("isbn", pubs.isbn);
+//                        res.put("series", pubs.series);
+//                        res.put("cross_ref", pubs.cross_ref);
+                    System.out.println(res);
+//                      reslist.put(Integer.toString(i),res.toString());
+                    reslist.add(res);
+                }
+                System.out.println(reslist);
+                return ok(reslist.toString());
+            } else {
+                System.out.println(reslist.toString());
+                return ok("null");
+            }
         }
         catch (Exception e) {
             return ok("false");

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/huasucaster/Desktop/CS Master/CS7340/Lab2/Lab-2-backend/conf/routes
-// @DATE:Tue Mar 02 09:54:54 CST 2021
+// @DATE:Wed Mar 03 04:39:49 CST 2021
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -35,6 +35,18 @@ package controllers {
     }
 
   
+    // @LINE:22
+    def partOneQueryFour(): Call = {
+      import ReverseRouteContext.empty
+      Call("POST", _prefix + { _defaultPrefix } + "query4Response")
+    }
+  
+    // @LINE:19
+    def partOneQueryThree(): Call = {
+      import ReverseRouteContext.empty
+      Call("POST", _prefix + { _defaultPrefix } + "query3Response")
+    }
+  
     // @LINE:12
     def findAll(): Call = {
       import ReverseRouteContext.empty
@@ -42,9 +54,15 @@ package controllers {
     }
   
     // @LINE:15
-    def authenticate(): Call = {
+    def partOneQueryOne(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "query1Response")
+    }
+  
+    // @LINE:17
+    def partOneQueryTwo(): Call = {
+      import ReverseRouteContext.empty
+      Call("POST", _prefix + { _defaultPrefix } + "query2Response")
     }
   
   }

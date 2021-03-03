@@ -12,7 +12,14 @@ GET     /                           controllers.HomeController.index
 GET     /findAll                    controllers.PubController.findAll()
 
 # An example controller showing a sample home page
-POST     /query1Response                    controllers.PubController.authenticate()
+POST     /query1Response                    controllers.PubController.partOneQueryOne()
+
+POST     /query2Response                    controllers.PubController.partOneQueryTwo()
+
+POST     /query3Response                    controllers.PubController.partOneQueryThree()
+
+
+POST     /query4Response                    controllers.PubController.partOneQueryFour()
 
 
 

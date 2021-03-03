@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/huasucaster/Desktop/CS Master/CS7340/Lab2/Lab-2-backend/conf/routes
-// @DATE:Tue Mar 02 09:54:54 CST 2021
+// @DATE:Wed Mar 03 04:39:49 CST 2021
 
 package router
 
@@ -45,7 +45,10 @@ class Routes(
   def documentation = List(
     ("""GET""", this.prefix, """controllers.HomeController.index"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """findAll""", """controllers.PubController.findAll()"""),
-    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """query1Response""", """controllers.PubController.authenticate()"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """query1Response""", """controllers.PubController.partOneQueryOne()"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """query2Response""", """controllers.PubController.partOneQueryTwo()"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """query3Response""", """controllers.PubController.partOneQueryThree()"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """query4Response""", """controllers.PubController.partOneQueryFour()"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -88,19 +91,70 @@ class Routes(
   )
 
   // @LINE:15
-  private[this] lazy val controllers_PubController_authenticate2_route = Route("POST",
+  private[this] lazy val controllers_PubController_partOneQueryOne2_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("query1Response")))
   )
-  private[this] lazy val controllers_PubController_authenticate2_invoker = createInvoker(
-    PubController_1.authenticate(),
+  private[this] lazy val controllers_PubController_partOneQueryOne2_invoker = createInvoker(
+    PubController_1.partOneQueryOne(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.PubController",
-      "authenticate",
+      "partOneQueryOne",
       Nil,
       "POST",
       """ An example controller showing a sample home page""",
       this.prefix + """query1Response"""
+    )
+  )
+
+  // @LINE:17
+  private[this] lazy val controllers_PubController_partOneQueryTwo3_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("query2Response")))
+  )
+  private[this] lazy val controllers_PubController_partOneQueryTwo3_invoker = createInvoker(
+    PubController_1.partOneQueryTwo(),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.PubController",
+      "partOneQueryTwo",
+      Nil,
+      "POST",
+      """""",
+      this.prefix + """query2Response"""
+    )
+  )
+
+  // @LINE:19
+  private[this] lazy val controllers_PubController_partOneQueryThree4_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("query3Response")))
+  )
+  private[this] lazy val controllers_PubController_partOneQueryThree4_invoker = createInvoker(
+    PubController_1.partOneQueryThree(),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.PubController",
+      "partOneQueryThree",
+      Nil,
+      "POST",
+      """""",
+      this.prefix + """query3Response"""
+    )
+  )
+
+  // @LINE:22
+  private[this] lazy val controllers_PubController_partOneQueryFour5_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("query4Response")))
+  )
+  private[this] lazy val controllers_PubController_partOneQueryFour5_invoker = createInvoker(
+    PubController_1.partOneQueryFour(),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.PubController",
+      "partOneQueryFour",
+      Nil,
+      "POST",
+      """""",
+      this.prefix + """query4Response"""
     )
   )
 
@@ -120,9 +174,27 @@ class Routes(
       }
   
     // @LINE:15
-    case controllers_PubController_authenticate2_route(params) =>
+    case controllers_PubController_partOneQueryOne2_route(params) =>
       call { 
-        controllers_PubController_authenticate2_invoker.call(PubController_1.authenticate())
+        controllers_PubController_partOneQueryOne2_invoker.call(PubController_1.partOneQueryOne())
+      }
+  
+    // @LINE:17
+    case controllers_PubController_partOneQueryTwo3_route(params) =>
+      call { 
+        controllers_PubController_partOneQueryTwo3_invoker.call(PubController_1.partOneQueryTwo())
+      }
+  
+    // @LINE:19
+    case controllers_PubController_partOneQueryThree4_route(params) =>
+      call { 
+        controllers_PubController_partOneQueryThree4_invoker.call(PubController_1.partOneQueryThree())
+      }
+  
+    // @LINE:22
+    case controllers_PubController_partOneQueryFour5_route(params) =>
+      call { 
+        controllers_PubController_partOneQueryFour5_invoker.call(PubController_1.partOneQueryFour())
       }
   }
 }

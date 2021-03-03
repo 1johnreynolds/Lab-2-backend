@@ -76,7 +76,7 @@ public class pub_info extends Model {
 
     public static Find<Long, pub_info> find = new Find<Long, pub_info>(){};
 
-    public static List<SqlRow> findByTitle(String title) {
+    public static List<SqlRow> findByTitle_1_1(String title) {
         try{
 
             List<SqlRow> query1_1 = Ebean.createSqlQuery("select * from pub_info where title like '"+replacePunctuation(title)+ "'\n" +
@@ -88,6 +88,52 @@ public class pub_info extends Model {
 //                    .setFirstRow(0)
 //                    .findList();
             return query1_1;
+        }catch(Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public static List<SqlRow> findByJournal_1_2(String title, int volume, int number) {
+        try{
+
+            List<SqlRow> query1_2 = Ebean.createSqlQuery("Select distinct(title), author_list, mdate," +
+                    "article_key,editors,pages, author_list,EE,pub_url,pub_year,journal,volume,pub_number" +
+                    " from pub_info where " +
+                    "journal='" + replacePunctuation(title) + "' \n" +
+                    "and volume=" + volume + " \n" +
+                    "and  pub_number=" + number + "")
+                    .findList();
+            return query1_2;
+        }catch(Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+
+    public static List<SqlRow> findByTitle_1_3(String author, int year) {
+        try{
+
+            List<SqlRow> query1_3 = Ebean.createSqlQuery("SELECT distinct(title) FROM pub_info " +
+                    "where author = '" + replacePunctuation(author) + "'" +
+                    "and pub_year= " + year + "")
+                    .findList();
+            return query1_3;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+    public static List<SqlRow> findByAuthor_1_4() {
+        try{
+
+            List<SqlRow> query1_4 = Ebean.createSqlQuery("SELECT author,count(author) FROM pub_info " +
+                    "where author in (SELECT author FROM pub_info  GROUP BY author HAVING COUNT(author)>10) " +
+                    "group by author " +
+                    "order by count(author)")
+                    .findList();
+            return query1_4;
         }catch(Exception e){
             e.printStackTrace();
             return null;

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/huasucaster/Desktop/CS Master/CS7340/Lab2/Lab-2-backend/conf/routes
-// @DATE:Tue Mar 02 09:54:54 CST 2021
+// @DATE:Wed Mar 03 04:39:49 CST 2021
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -43,6 +43,26 @@ package controllers.javascript {
     }
 
   
+    // @LINE:22
+    def partOneQueryFour: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.PubController.partOneQueryFour",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "query4Response"})
+        }
+      """
+    )
+  
+    // @LINE:19
+    def partOneQueryThree: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.PubController.partOneQueryThree",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "query3Response"})
+        }
+      """
+    )
+  
     // @LINE:12
     def findAll: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.PubController.findAll",
@@ -54,11 +74,21 @@ package controllers.javascript {
     )
   
     // @LINE:15
-    def authenticate: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.PubController.authenticate",
+    def partOneQueryOne: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.PubController.partOneQueryOne",
       """
         function() {
           return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "query1Response"})
+        }
+      """
+    )
+  
+    // @LINE:17
+    def partOneQueryTwo: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.PubController.partOneQueryTwo",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "query2Response"})
         }
       """
     )

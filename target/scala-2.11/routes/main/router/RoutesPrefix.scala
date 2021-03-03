@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/huasucaster/Desktop/CS Master/CS7340/Lab2/Lab-2-backend/conf/routes
-// @DATE:Tue Mar 02 09:54:54 CST 2021
+// @DATE:Wed Mar 03 04:39:49 CST 2021
 
 
 package router {
