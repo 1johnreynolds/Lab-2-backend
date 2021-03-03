@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c47cdf6e-aab0-4749-97fb-fe10b0b36525" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/ebean-backend-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/ebean-backend-build.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/ebean-backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/ebean-backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/PubController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/PubController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/pub_info.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/pub_info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pub.scala.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pub.scala.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/publist.scala.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/publist.scala.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/application.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/application.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/twirl/main/views/html/pub.template.scala" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/twirl/main/views/html/pub.template.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/twirl/main/views/html/publist.template.scala" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/twirl/main/views/html/publist.template.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/SaxonEE10-3J.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/mysql-connector-java-8.0.23.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,10 +239,10 @@
     </state>
     <state width="1868" height="361" key="GridCell.Tab.1.right/-39.-1080.1920.1080/0.0.1536.960@-39.-1080.1920.1080" timestamp="1614753832260" />
     <state width="1868" height="361" key="GridCell.Tab.1.right/-39.-1080.1920.1080/0.25.1536.935@-39.-1080.1920.1080" timestamp="1614753271536" />
-    <state x="281" y="-1062" key="SettingsEditor" timestamp="1614755941770">
+    <state x="281" y="-1062" key="SettingsEditor" timestamp="1614756415221">
       <screen x="-39" y="-1080" width="1920" height="1080" />
     </state>
-    <state x="281" y="-1062" key="SettingsEditor/-39.-1080.1920.1080/0.0.1536.960@-39.-1080.1920.1080" timestamp="1614755941770" />
+    <state x="281" y="-1062" key="SettingsEditor/-39.-1080.1920.1080/0.0.1536.960@-39.-1080.1920.1080" timestamp="1614756415221" />
     <state x="281" y="-1062" key="SettingsEditor/-39.-1080.1920.1080/0.25.1536.935@-39.-1080.1920.1080" timestamp="1614755798190" />
   </component>
   <component name="XDebuggerManager">
