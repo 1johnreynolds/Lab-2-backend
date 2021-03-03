@@ -201,6 +201,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="lib" level="project" />
   </component>
   <component name="SbtModule">
     <option name="buildForURI" value="file:$MODULE_DIR$/../../../../../../CS%20Master/CS7340/Lab2/Lab-2-backend/" />

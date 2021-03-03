@@ -1,11 +1,14 @@
 package models;
 
+import com.avaje.ebean.Ebean;
 import com.avaje.ebean.Model;
+import com.avaje.ebean.SqlRow;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.List;
+import java.sql.*;
 
 
 @Entity
@@ -17,7 +20,7 @@ public class pub_info extends Model {
     public Long pid;
 
     @Column(columnDefinition = "VARCHAR (250)NOT NULL DEFAULT ''")
-    public String Title;
+    public String title;
 
     @Column(columnDefinition = "VARCHAR(100) NOT NULL DEFAULT ''")
     public String mdate;
@@ -73,12 +76,18 @@ public class pub_info extends Model {
 
     public static Find<Long, pub_info> find = new Find<Long, pub_info>(){};
 
-    public static List<pub_info> findByTitle(String title) {
+    public static List<SqlRow> findByTitle(String title) {
         try{
-            return pub_info.find
-                    .where()
-                    .eq("Title", title)
+
+            List<SqlRow> query1_1 = Ebean.createSqlQuery("select * from pub_info where title like '"+replacePunctuation(title)+ "'\n" +
+                    "limit 1;")
                     .findList();
+//            return pub_info.find
+//                    .where()
+//                    .eq("title", title)
+//                    .setFirstRow(0)
+//                    .findList();
+            return query1_1;
         }catch(Exception e){
             e.printStackTrace();
             return null;
@@ -88,6 +97,18 @@ public class pub_info extends Model {
 
     public static List<pub_info> findAll() {
         return find.all();
+    }
+
+    public static String replacePunctuation(String str) {
+        if(str==null){
+            return str;
+        }
+        String returnStr = "";
+        if(str.indexOf("'") != -1) {
+            returnStr = str.replaceAll("'", "''");
+            str = returnStr;
+        }
+        return str;
     }
 
 }
