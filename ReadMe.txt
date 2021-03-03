@@ -15,4 +15,7 @@ mysqldump:
 
 3. input command: $mysqldump -u root -p CS7340TEAMONELABONE pub_Info> './pub_Info.sql' (Export database CS7340TEAMONELABONE.pub_info table into current path)
 4. input command: $mysql -h localhost -u root -p123321123(database password) -D CS7340TEAMONELABONE <./pub_Info.sql (Or import pub_Info.sql table into database CS7340TEAMONELABONE)
-
+mysqldump -uroot -p CS7340TEAMONELABONE pub_Info> ./pub_Info.sql
+mysql -h localhost -uroot -p -D CS7340TEAMONELABTWO <./pub_Info.sql
+mysqldump -uroot -p CS7340TEAMONELABONE auth_info> ./auth_info.sql
+mysql -h localhost -uroot -p -D CS7340TEAMONELABTWO < auth_info.sql

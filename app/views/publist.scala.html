@@ -1,4 +1,4 @@
-@(pubList: List[models.Publication])
+@(pubList: List[pub_info])
 
 <!DOCTYPE html>
 <html>
@@ -6,7 +6,7 @@
 
 <table border="1">
     <tr>
-        <th>Publication ID</th>
+        <th>pub_info ID</th>
         <th>Title</th>
         <th>Metadata</th>
     </tr>
@@ -14,7 +14,22 @@
     <tr>
         <td>@pubMetadata.pid</td>
         <td>@pubMetadata.Title</td>
-        <td>@pubMetadata.Metadata</td>
+        <td>@pubMetadata.mdate</td>
+        <td>@pubMetadata.author</td>
+        <td>@pubMetadata.author_list</td>
+        <td>@pubMetadata.editors</td>
+        <td>@pubMetadata.pages</td>
+        <td>@pubMetadata.ee</td>
+        <td>@pubMetadata.pub_url</td>
+        <td>@pubMetadata.pub_year</td>
+        <td>@pubMetadata.journal</td>
+        <td>@pubMetadata.book_title</td>
+        <td>@pubMetadata.volume</td>
+        <td>@pubMetadata.pub_number</td>
+        <td>@pubMetadata.publisher</td>
+        <td>@pubMetadata.isbn</td>
+        <td>@pubMetadata.series</td>
+        <td>@pubMetadata.cross_ref</td>
     </tr>
     }
 </table>

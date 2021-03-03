@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31d49085-b856-4725-9bf6-ed9a9c646725" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/google-java-format.xml" beforeDir="false" />
+    <list default="true" id="c47cdf6e-aab0-4749-97fb-fe10b0b36525" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/play2_project_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/play2_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/pub_info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/ebean-backend-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/ebean-backend-build.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/ebean-backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/ebean-backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/play2_project_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/play2_settings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sbt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadMe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/PubController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/PubController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Publication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Publication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Publication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pub.scala.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pub.scala.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/publist.scala.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/publist.scala.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conf/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/conf/application.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conf/evolutions/default/1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/conf/evolutions/default/1.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/routes" beforeDir="false" afterPath="$PROJECT_DIR$/conf/routes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/application.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/application.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/ebean-backend/ebean-backend$sources_2.11/1.0-SNAPSHOT/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/ebean-backend/ebean-backend$sources_2.11/1.0-SNAPSHOT/resolved.xml.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/ebean-backend/ebean-backend$sources_2.11/1.0-SNAPSHOT/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/ebean-backend/ebean-backend$sources_2.11/1.0-SNAPSHOT/resolved.xml.xml" afterDir="false" />
@@ -58,6 +57,8 @@
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/routes/main/router/Routes.scala" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/routes/main/router/Routes.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/routes/main/router/RoutesPrefix.scala" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/routes/main/router/RoutesPrefix.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/twirl/main/views/html/index.template.scala" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/twirl/main/views/html/index.template.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/twirl/main/views/html/pub.template.scala" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/twirl/main/views/html/pub.template.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/twirl/main/views/html/publist.template.scala" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/twirl/main/views/html/publist.template.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,40 +68,114 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="Play2ProjectSettings">
+    <option name="LANGUAGE_IMPORTS">
+      <array>
+        <option value="play.data._" />
+        <option value="play.api.data.Field" />
+        <option value="play.api.templates.PlayMagic._" />
+        <option value="scala.collection.JavaConversions._" />
+        <option value="java.lang._" />
+        <option value="play.mvc._" />
+        <option value="play.core.j.PlayMagicForJava._" />
+        <option value="java.util._" />
+        <option value="scala.collection.JavaConverters._" />
+        <option value="play.mvc.Http.Context.Implicit._" />
+      </array>
+    </option>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectId" id="1pA5c2GmrFguhvE0tYnbDSDzyLz" />
+  <component name="ProjectId" id="1pCviSw6lTwk8SORuR7i5pQrk5h" />
   <component name="ProjectViewState">
-    <option name="flattenPackages" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
-    <option name="showMembers" value="true" />
-    <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/build.sbt" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Backend" type="Play2FrameworkRunConfigurations" factoryName="Play 2 App" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="ebean-backend" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="enableSbtGlobalPlugins" value="false" />
+      <option name="play2EnvVariables">
+        <map />
+      </option>
+      <option name="play2IsNonDefaultInstallDirUsed" value="false" />
+      <option name="play2JpdaPort" value="9999" />
+      <option name="play2JvmOptions">
+        <array>
+          <option value="-Xms512M" />
+          <option value="-Xmx1024M" />
+          <option value="-Xss1M" />
+          <option value="-XX:+CMSClassUnloadingEnabled" />
+          <option value="-XX:MaxPermSize=256M" />
+        </array>
+      </option>
+      <option name="play2NeedOpenInBrowser" value="true" />
+      <option name="play2NonDefaultInstallDir" value="" />
+      <option name="play2OpenUrl" value="http://localhost:9005" />
+      <option name="play2isAutoReloadEnabled" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Play2FrameworkRunConfigurations" factoryName="Play 2 App" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="ebean-backend" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="enableSbtGlobalPlugins" value="false" />
+      <option name="play2EnvVariables">
+        <map />
+      </option>
+      <option name="play2IsNonDefaultInstallDirUsed" value="false" />
+      <option name="play2JpdaPort" value="9999" />
+      <option name="play2JvmOptions">
+        <array>
+          <option value="-Xms512M" />
+          <option value="-Xmx1024M" />
+          <option value="-Xss1M" />
+          <option value="-XX:+CMSClassUnloadingEnabled" />
+          <option value="-XX:MaxPermSize=256M" />
+        </array>
+      </option>
+      <option name="play2NeedOpenInBrowser" value="true" />
+      <option name="play2NonDefaultInstallDir" value="" />
+      <option name="play2OpenUrl" value="http://localhost:9005" />
+      <option name="play2isAutoReloadEnabled" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SbtLocalSettings">
     <option name="availableProjects">
@@ -115,7 +190,7 @@
           <value>
             <list>
               <ExternalProjectPojo>
-                <option name="name" value="root [file:/Users/beichenhu/Desktop/Service-Oriented%20Computing%20/Lab2/Back/Lab-2-backend/]" />
+                <option name="name" value="root [file:/Users/huasucaster/Desktop/CS%20Master/CS7340/Lab2/Lab-2-backend/]" />
                 <option name="path" value="$PROJECT_DIR$" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
@@ -129,7 +204,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4843838991082" />
+        <entry key="$PROJECT_DIR$" value="4844099648598" />
         <entry key="$PROJECT_DIR$/build.sbt" value="2667777612" />
         <entry key="$PROJECT_DIR$/project/build.properties" value="934637055" />
         <entry key="$PROJECT_DIR$/project/plugins.sbt" value="3126062473" />
@@ -137,14 +212,11 @@
     </option>
     <option name="projectSyncType">
       <map>
-        <entry key="$PROJECT_DIR$/../../../Back-front_end/Frontend" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../../Lab-2-Ebean/Frontend" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../../Lab-2-Ebean/ebean-backend" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../client" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../../SOSE Lab-2 Play Frontend-Backend/Backend" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../../SOSE Lab-2 Play Frontend-Backend/Frontend" value="PREVIEW" />
-        <entry key="$USER_HOME$/IdeaProjects/Frontend" value="PREVIEW" />
-        <entry key="$USER_HOME$/IdeaProjects/ebean-backend" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/Lab-2-Ebean 3/Frontend" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/Lab-2-Ebean/Frontend" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/Lab-2-backend-beichenh" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/Lab-2-backend-master" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/SOSE Lab-2 Play Frontend-Backend/Frontend" value="PREVIEW" />
       </map>
     </option>
   </component>
@@ -153,12 +225,47 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="31d49085-b856-4725-9bf6-ed9a9c646725" name="Default Changelist" comment="" />
-      <created>1614613130478</created>
+      <changelist id="c47cdf6e-aab0-4749-97fb-fe10b0b36525" name="Default Changelist" comment="" />
+      <created>1614700013916</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1614613130478</updated>
+      <updated>1614700013916</updated>
+      <workItem from="1614700015757" duration="22187000" />
+      <workItem from="1614730501879" duration="982000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="421" y="-957" key="#Inspections" timestamp="1614707416275">
+      <screen x="-39" y="-1080" width="1920" height="1080" />
+    </state>
+    <state x="421" y="-957" key="#Inspections/-39.-1080.1920.1080/0.0.1536.960@-39.-1080.1920.1080" timestamp="1614707416275" />
+    <state x="521" y="-882" width="1085" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614708278629">
+      <screen x="-39" y="-1080" width="1920" height="1080" />
+    </state>
+    <state x="521" y="-882" width="1085" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog/-39.-1080.1920.1080/0.0.1536.960@-39.-1080.1920.1080" timestamp="1614708278629" />
+    <state width="1868" height="206" key="GridCell.Tab.0.bottom" timestamp="1614723624743">
+      <screen x="-39" y="-1080" width="1920" height="1080" />
+    </state>
+    <state width="1868" height="206" key="GridCell.Tab.0.bottom/-39.-1080.1920.1080/0.0.1536.960@-39.-1080.1920.1080" timestamp="1614723624743" />
+    <state width="1868" height="291" key="GridCell.Tab.0.bottom/-39.-1080.1920.1080/0.25.1536.935@-39.-1080.1920.1080" timestamp="1614708884825" />
+    <state width="1868" height="206" key="GridCell.Tab.0.center" timestamp="1614723624741">
+      <screen x="-39" y="-1080" width="1920" height="1080" />
+    </state>
+    <state width="1868" height="206" key="GridCell.Tab.0.center/-39.-1080.1920.1080/0.0.1536.960@-39.-1080.1920.1080" timestamp="1614723624741" />
+    <state width="1868" height="291" key="GridCell.Tab.0.center/-39.-1080.1920.1080/0.25.1536.935@-39.-1080.1920.1080" timestamp="1614708884822" />
+    <state width="1868" height="206" key="GridCell.Tab.0.left" timestamp="1614723624740">
+      <screen x="-39" y="-1080" width="1920" height="1080" />
+    </state>
+    <state width="1868" height="206" key="GridCell.Tab.0.left/-39.-1080.1920.1080/0.0.1536.960@-39.-1080.1920.1080" timestamp="1614723624740" />
+    <state width="1868" height="291" key="GridCell.Tab.0.left/-39.-1080.1920.1080/0.25.1536.935@-39.-1080.1920.1080" timestamp="1614708884821" />
+    <state width="1868" height="206" key="GridCell.Tab.0.right" timestamp="1614723624742">
+      <screen x="-39" y="-1080" width="1920" height="1080" />
+    </state>
+    <state width="1868" height="206" key="GridCell.Tab.0.right/-39.-1080.1920.1080/0.0.1536.960@-39.-1080.1920.1080" timestamp="1614723624742" />
+    <state width="1868" height="291" key="GridCell.Tab.0.right/-39.-1080.1920.1080/0.25.1536.935@-39.-1080.1920.1080" timestamp="1614708884823" />
   </component>
 </project>

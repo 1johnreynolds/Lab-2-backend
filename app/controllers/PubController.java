@@ -2,26 +2,14 @@ package controllers;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import models.Publication;
+import models.pub_info;
 import play.libs.Json;
-import play.libs.ws.WSClient;
-import play.libs.ws.WSRequest;
 import play.mvc.Controller;
 import play.mvc.Result;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-import play.libs.Json;
-import play.libs.ws.WSClient;
-import play.libs.ws.WSRequest;
-import play.libs.ws.WSResponse;
-
-import java.util.concurrent.CompletionStage;
-import play.libs.ws.WSResponse;
-import play.libs.ws.WSResponse;
 
 
-import javax.inject.Inject;
-import java.util.concurrent.CompletionStage;
-
+import javax.json.JsonObject;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -40,32 +28,52 @@ public class PubController extends Controller {
         String title = req.get("Title").asText();
         System.out.println("receive title"+title);
         try {
-            System.out.println("receive title"+title);
+            System.out.println("receive title" + title);
+            List<pub_info> pub = pub_info.findByTitle(title); // ( match where username and password both match )
+            System.out.println(pub != null);
+            //System.out.println(pub.book_title);
+           ObjectNode reslist= Json.newObject();
 
-            Publication pub = Publication.findByTitle(title); // ( match where username and password both match )
-            System.out.println(pub!=null);
-
-            if(pub != null){
-                ObjectNode res = Json.newObject();
-                res.put("pid",pub.pid);
-                res.put("Title", pub.Title);
-                res.put("Metadata", pub.Metadata);
-                System.out.println(res);
-                return ok(res);
-            }else{
-                ObjectNode res = Json.newObject();
-                System.out.println(res);
-                return ok("null");
-            }
+                if (pub != null) {
+                    int i=0;
+                    for (pub_info pubs : pub) {
+                        i++;
+                        ObjectNode res = Json.newObject();
+                        res.put("pid", pubs.pid);
+                        res.put("Title", pubs.Title);
+                        res.put("mdate", pubs.mdate);
+                        res.put("author", pubs.author);
+                        res.put("author_list", pubs.author_list);
+                        res.put("article_key", pubs.article_key);
+                        res.put("editor", pubs.editors);
+                        res.put("pages", pubs.pages);
+                        res.put("ee", pubs.ee);
+                        res.put("pub_url", pubs.pub_url);
+                        res.put("journal", pubs.journal);
+                        res.put("book_title", pubs.book_title);
+                        res.put("volume", pubs.volume);
+                        res.put("pub_number", pubs.pub_number);
+                        res.put("publisher", pubs.publisher);
+                        res.put("isbn", pubs.isbn);
+                        res.put("series", pubs.series);
+                        res.put("Cross_ref", pubs.cross_ref);
+                        System.out.println(res);
+                        reslist.put(Integer.toString(i),res.toString());
+                    }
+                    System.out.println(reslist);
+                    return ok(reslist);
+                } else {
+                    System.out.println(reslist.toString());
+                    return ok("null");
+                }
         }
         catch (Exception e) {
             return ok("false");
         }
-
     }
 
     public Result findAll(){
-        List<Publication> pubs = Publication.findAll();
+        List<pub_info> pubs = pub_info.findAll();
         return ok(views.html.publist.render(pubs));
     }
 
