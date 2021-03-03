@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/Users/huasucaster/Downloads/Lab-2-Ebean 3/ebean-backend/conf/routes
-// @DATE:Wed Feb 24 12:06:18 CST 2021
+// @SOURCE:/Users/huasucaster/Desktop/CS Master/CS7340/Lab2/Lab-2-backend/conf/routes
+// @DATE:Tue Mar 02 09:54:54 CST 2021
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -35,30 +35,30 @@ package controllers.javascript {
   
   }
 
-  // @LINE:9
-  class ReverseUserController(_prefix: => String) {
+  // @LINE:12
+  class ReversePubController(_prefix: => String) {
 
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:9
-    def authenticate: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.UserController.authenticate",
+    // @LINE:12
+    def findAll: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.PubController.findAll",
       """
         function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "findAll"})
         }
       """
     )
   
-    // @LINE:13
-    def registerNew: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.UserController.registerNew",
+    // @LINE:15
+    def authenticate: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.PubController.authenticate",
       """
         function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "signup"})
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "query1Response"})
         }
       """
     )

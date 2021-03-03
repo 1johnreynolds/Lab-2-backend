@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/Users/huasucaster/Downloads/Lab-2-Ebean 3/ebean-backend/conf/routes
-// @DATE:Wed Feb 24 12:06:18 CST 2021
+// @SOURCE:/Users/huasucaster/Desktop/CS Master/CS7340/Lab2/Lab-2-backend/conf/routes
+// @DATE:Tue Mar 02 09:54:54 CST 2021
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -28,23 +28,23 @@ package controllers {
   
   }
 
-  // @LINE:9
-  class ReverseUserController(_prefix: => String) {
+  // @LINE:12
+  class ReversePubController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:9
-    def authenticate(): Call = {
+    // @LINE:12
+    def findAll(): Call = {
       import ReverseRouteContext.empty
-      Call("POST", _prefix + { _defaultPrefix } + "login")
+      Call("GET", _prefix + { _defaultPrefix } + "findAll")
     }
   
-    // @LINE:13
-    def registerNew(): Call = {
+    // @LINE:15
+    def authenticate(): Call = {
       import ReverseRouteContext.empty
-      Call("POST", _prefix + { _defaultPrefix } + "signup")
+      Call("POST", _prefix + { _defaultPrefix } + "query1Response")
     }
   
   }

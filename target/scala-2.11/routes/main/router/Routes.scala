@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/Users/huasucaster/Downloads/Lab-2-Ebean 3/ebean-backend/conf/routes
-// @DATE:Wed Feb 24 12:06:18 CST 2021
+// @SOURCE:/Users/huasucaster/Desktop/CS Master/CS7340/Lab2/Lab-2-backend/conf/routes
+// @DATE:Tue Mar 02 09:54:54 CST 2021
 
 package router
 
@@ -18,8 +18,8 @@ class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:6
   HomeController_0: controllers.HomeController,
-  // @LINE:9
-  UserController_1: controllers.UserController,
+  // @LINE:12
+  PubController_1: controllers.PubController,
   val prefix: String
 ) extends GeneratedRouter {
 
@@ -27,15 +27,15 @@ class Routes(
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:6
     HomeController_0: controllers.HomeController,
-    // @LINE:9
-    UserController_1: controllers.UserController
-  ) = this(errorHandler, HomeController_0, UserController_1, "/")
+    // @LINE:12
+    PubController_1: controllers.PubController
+  ) = this(errorHandler, HomeController_0, PubController_1, "/")
 
   import ReverseRouteContext.empty
 
   def withPrefix(prefix: String): Routes = {
     router.RoutesPrefix.setPrefix(prefix)
-    new Routes(errorHandler, HomeController_0, UserController_1, prefix)
+    new Routes(errorHandler, HomeController_0, PubController_1, prefix)
   }
 
   private[this] val defaultPrefix: String = {
@@ -44,8 +44,8 @@ class Routes(
 
   def documentation = List(
     ("""GET""", this.prefix, """controllers.HomeController.index"""),
-    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.UserController.authenticate()"""),
-    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """signup""", """controllers.UserController.registerNew()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """findAll""", """controllers.PubController.findAll()"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """query1Response""", """controllers.PubController.authenticate()"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -70,37 +70,37 @@ class Routes(
     )
   )
 
-  // @LINE:9
-  private[this] lazy val controllers_UserController_authenticate1_route = Route("POST",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("login")))
+  // @LINE:12
+  private[this] lazy val controllers_PubController_findAll1_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("findAll")))
   )
-  private[this] lazy val controllers_UserController_authenticate1_invoker = createInvoker(
-    UserController_1.authenticate(),
+  private[this] lazy val controllers_PubController_findAll1_invoker = createInvoker(
+    PubController_1.findAll(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
-      "controllers.UserController",
-      "authenticate",
+      "controllers.PubController",
+      "findAll",
       Nil,
-      "POST",
-      """Login""",
-      this.prefix + """login"""
+      "GET",
+      """ An example controller showing a sample home page""",
+      this.prefix + """findAll"""
     )
   )
 
-  // @LINE:13
-  private[this] lazy val controllers_UserController_registerNew2_route = Route("POST",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("signup")))
+  // @LINE:15
+  private[this] lazy val controllers_PubController_authenticate2_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("query1Response")))
   )
-  private[this] lazy val controllers_UserController_registerNew2_invoker = createInvoker(
-    UserController_1.registerNew(),
+  private[this] lazy val controllers_PubController_authenticate2_invoker = createInvoker(
+    PubController_1.authenticate(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
-      "controllers.UserController",
-      "registerNew",
+      "controllers.PubController",
+      "authenticate",
       Nil,
       "POST",
-      """ Add User  {"name":name, "password":password}""",
-      this.prefix + """signup"""
+      """ An example controller showing a sample home page""",
+      this.prefix + """query1Response"""
     )
   )
 
@@ -113,16 +113,16 @@ class Routes(
         controllers_HomeController_index0_invoker.call(HomeController_0.index)
       }
   
-    // @LINE:9
-    case controllers_UserController_authenticate1_route(params) =>
+    // @LINE:12
+    case controllers_PubController_findAll1_route(params) =>
       call { 
-        controllers_UserController_authenticate1_invoker.call(UserController_1.authenticate())
+        controllers_PubController_findAll1_invoker.call(PubController_1.findAll())
       }
   
-    // @LINE:13
-    case controllers_UserController_registerNew2_route(params) =>
+    // @LINE:15
+    case controllers_PubController_authenticate2_route(params) =>
       call { 
-        controllers_UserController_registerNew2_invoker.call(UserController_1.registerNew())
+        controllers_PubController_authenticate2_invoker.call(PubController_1.authenticate())
       }
   }
 }
