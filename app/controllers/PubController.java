@@ -32,7 +32,8 @@ public class PubController extends Controller {
             List<pub_info> pub = pub_info.findByTitle(title); // ( match where username and password both match )
             System.out.println(pub != null);
             //System.out.println(pub.book_title);
-           ObjectNode reslist= Json.newObject();
+            //ObjectNode reslist= Json.newObject();
+            List<ObjectNode> reslist= new ArrayList<>();
 
                 if (pub != null) {
                     int i=0;
@@ -40,7 +41,7 @@ public class PubController extends Controller {
                         i++;
                         ObjectNode res = Json.newObject();
                         res.put("pid", pubs.pid);
-                        res.put("Title", pubs.Title);
+                        res.put("title", pubs.Title);
                         res.put("mdate", pubs.mdate);
                         res.put("author", pubs.author);
                         res.put("author_list", pubs.author_list);
@@ -56,12 +57,13 @@ public class PubController extends Controller {
                         res.put("publisher", pubs.publisher);
                         res.put("isbn", pubs.isbn);
                         res.put("series", pubs.series);
-                        res.put("Cross_ref", pubs.cross_ref);
+                        res.put("cross_ref", pubs.cross_ref);
                         System.out.println(res);
-                        reslist.put(Integer.toString(i),res.toString());
+//                      reslist.put(Integer.toString(i),res.toString());
+                        reslist.add(res);
                     }
                     System.out.println(reslist);
-                    return ok(reslist);
+                    return ok(reslist.toString());
                 } else {
                     System.out.println(reslist.toString());
                     return ok("null");
