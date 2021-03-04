@@ -27,15 +27,17 @@ public class PubController extends Controller {
         System.out.println("In PartOneQueryOne");
         JsonNode req = request().body().asJson();
         String title = req.get("title").asText();
-        System.out.println("receive title"+title);
+        System.out.println("receive title: "+title);
         try {
             List<SqlRow> pub = pub_info.findByTitle_1_1(title); // ( match where username and password both match )
-            System.out.println(pub.get(0)!= null);
+            System.out.println(pub);
+            System.out.println(pub.size());
+            System.out.println(pub.get(0));
             //System.out.println(pub.book_title);
             //ObjectNode reslist= Json.newObject();
             List<ObjectNode> reslist= new ArrayList<>();
 
-                if (pub.get(0)!= null) {
+                if (pub.size()!= 0) {
                     int i=0;
                     for (SqlRow pubs : pub) {
                         i++;
@@ -104,12 +106,14 @@ public class PubController extends Controller {
         System.out.println("receive number"+number);
         try {
             List<SqlRow> pub = pub_info.findByJournal_1_2(title,volume,number); // ( match where username and password both match )
-            System.out.println(pub.get(0)!= null);
+            System.out.println(pub.size());
+            System.out.println(pub.size()!=0);
+
             //System.out.println(pub.book_title);
             //ObjectNode reslist= Json.newObject();
             List<ObjectNode> reslist= new ArrayList<>();
 
-            if (pub.get(0)!= null) {
+            if (pub.size()!=0) {
                 int i=0;
                 for (SqlRow pubs : pub) {
                     i++;
@@ -133,11 +137,12 @@ public class PubController extends Controller {
                 System.out.println(reslist);
                 return ok(reslist.toString());
             } else {
-                System.out.println(reslist.toString());
+                System.out.println("null res");
                 return ok("null");
             }
         }
         catch (Exception e) {
+            e.printStackTrace();
             return ok("false");
         }
     }
@@ -232,6 +237,7 @@ public class PubController extends Controller {
 
     public Result findAll(){
         List<pub_info> pubs = pub_info.findAll();
+        System.out.println(pubs);
         return ok(views.html.publist.render(pubs));
     }
 
