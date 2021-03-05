@@ -3,6 +3,7 @@ package controllers;
 import com.avaje.ebean.SqlRow;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import models.Conference;
 import models.pub_info;
 import play.libs.Json;
 import play.mvc.Controller;
