@@ -1,8 +1,8 @@
-2021-03-03 16:14:51,146 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
-2021-03-03 16:14:51,368 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://localhost:3306/CS7340TEAMONELABTWO?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-2021-03-03 16:14:52,266 [ERROR] from application in netty-event-loop-3 - 
+2021-03-05 21:05:58,176 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
+2021-03-05 21:05:58,370 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://localhost:3306/CS7340TEAMONELABTWO?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2021-03-05 21:05:58,976 [ERROR] from application in netty-event-loop-3 - 
 
-! @7j18ppo14 - Internal server error, for (GET) [/] ->
+! @7j1p097hc - Internal server error, for (GET) [/] ->
  
 play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
 	at play.api.db.evolutions.ApplicationEvolutions$$anonfun$play$api$db$evolutions$ApplicationEvolutions$$runEvolutions$1.apply$mcV$sp(ApplicationEvolutions.scala:77)
@@ -54,63 +54,31 @@ play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evoluti
 	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
-2021-03-03 16:14:59,098 [INFO] from application in ForkJoinPool-1-worker-1 - Shutting down connection pool.
-2021-03-03 16:14:59,181 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
-2021-03-03 16:14:59,198 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://localhost:3306/CS7340TEAMONELABTWO?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-2021-03-03 16:14:59,350 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
-2021-03-03 16:45:10,258 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-2 housekeeper - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=2m40s706ms).
-2021-03-03 17:07:46,904 [INFO] from application in application-akka.actor.default-dispatcher-19 - Shutting down connection pool.
-2021-03-03 17:07:47,160 [INFO] from application in application-akka.actor.default-dispatcher-19 - Creating Pool for datasource 'default'
-2021-03-03 17:07:47,185 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-19 - Database [default] connected at jdbc:mysql://localhost:3306/CS7340TEAMONELABTWO?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-2021-03-03 17:07:47,335 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-19 - Application started (Dev)
-2021-03-03 17:46:11,842 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-3 housekeeper - HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=4m24s268ms).
-2021-03-03 17:48:24,852 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-3 housekeeper - HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=1m12s999ms).
-2021-03-03 20:02:29,483 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-3 housekeeper - HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=2h14m4s627ms).
-2021-03-03 20:25:36,239 [INFO] from application in application-akka.actor.default-dispatcher-28 - Shutting down connection pool.
-2021-03-03 20:25:36,411 [INFO] from application in application-akka.actor.default-dispatcher-28 - Creating Pool for datasource 'default'
-2021-03-03 20:25:36,425 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-28 - Database [default] connected at jdbc:mysql://localhost:3306/CS7340TEAMONELABTWO?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-2021-03-03 20:25:36,640 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-28 - Application started (Dev)
-2021-03-03 20:26:02,099 [INFO] from application in application-akka.actor.default-dispatcher-5 - Shutting down connection pool.
-2021-03-03 20:26:02,189 [INFO] from application in application-akka.actor.default-dispatcher-5 - Creating Pool for datasource 'default'
-2021-03-03 20:26:02,208 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-5 - Database [default] connected at jdbc:mysql://localhost:3306/CS7340TEAMONELABTWO?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-2021-03-03 20:26:02,293 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-5 - Application started (Dev)
-2021-03-03 20:26:38,301 [INFO] from application in application-akka.actor.default-dispatcher-2 - Shutting down connection pool.
-2021-03-03 20:26:38,383 [INFO] from application in application-akka.actor.default-dispatcher-2 - Creating Pool for datasource 'default'
-2021-03-03 20:26:38,396 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-2 - Database [default] connected at jdbc:mysql://localhost:3306/CS7340TEAMONELABTWO?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-2021-03-03 20:26:38,467 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-2 - Application started (Dev)
-2021-03-03 20:27:36,623 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
-2021-03-03 20:27:36,747 [INFO] from application in application-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
-2021-03-03 20:27:36,760 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:mysql://localhost:3306/CS7340TEAMONELABTWO?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-2021-03-03 20:27:36,845 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
-2021-03-03 22:34:44,776 [INFO] from application in application-akka.actor.default-dispatcher-12 - Shutting down connection pool.
-2021-03-03 22:34:45,008 [INFO] from application in application-akka.actor.default-dispatcher-12 - Creating Pool for datasource 'default'
-2021-03-03 22:34:45,022 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-12 - Database [default] connected at jdbc:mysql://localhost:3306/CS7340TEAMONELABTWO?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-2021-03-03 22:34:45,213 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-12 - Application started (Dev)
-2021-03-03 22:35:58,328 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
-2021-03-03 22:35:58,473 [INFO] from application in application-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
-2021-03-03 22:35:58,490 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:mysql://localhost:3306/CS7340TEAMONELABTWO?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-2021-03-03 22:35:58,590 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
-2021-03-03 22:38:33,695 [INFO] from application in application-akka.actor.default-dispatcher-8 - Shutting down connection pool.
-2021-03-03 22:38:33,828 [INFO] from application in application-akka.actor.default-dispatcher-8 - Creating Pool for datasource 'default'
-2021-03-03 22:38:33,847 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-8 - Database [default] connected at jdbc:mysql://localhost:3306/CS7340TEAMONELABTWO?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-2021-03-03 22:38:33,992 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-8 - Application started (Dev)
-2021-03-03 22:39:25,804 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
-2021-03-03 22:39:26,131 [INFO] from application in application-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
-2021-03-03 22:39:26,152 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:mysql://localhost:3306/CS7340TEAMONELABTWO?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-2021-03-03 22:39:26,261 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
-2021-03-03 22:39:52,467 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
-2021-03-03 22:39:52,527 [INFO] from application in application-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
-2021-03-03 22:39:52,537 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:mysql://localhost:3306/CS7340TEAMONELABTWO?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-2021-03-03 22:39:52,592 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
-2021-03-03 22:40:37,277 [INFO] from application in application-akka.actor.default-dispatcher-5 - Shutting down connection pool.
-2021-03-03 22:40:37,404 [INFO] from application in application-akka.actor.default-dispatcher-5 - Creating Pool for datasource 'default'
-2021-03-03 22:40:37,424 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-5 - Database [default] connected at jdbc:mysql://localhost:3306/CS7340TEAMONELABTWO?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-2021-03-03 22:40:37,683 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-5 - Application started (Dev)
-2021-03-03 22:41:24,115 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
-2021-03-03 22:41:24,181 [INFO] from application in application-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
-2021-03-03 22:41:24,196 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:mysql://localhost:3306/CS7340TEAMONELABTWO?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-2021-03-03 22:41:24,281 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
-2021-03-03 22:41:51,258 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
-2021-03-03 22:41:51,392 [INFO] from application in application-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
-2021-03-03 22:41:51,412 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:mysql://localhost:3306/CS7340TEAMONELABTWO?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-2021-03-03 22:41:51,516 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
+2021-03-05 21:06:04,276 [INFO] from application in ForkJoinPool-1-worker-1 - Shutting down connection pool.
+2021-03-05 21:06:04,358 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
+2021-03-05 21:06:04,365 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://localhost:3306/CS7340TEAMONELABTWO?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2021-03-05 21:06:04,467 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2021-03-05 21:10:05,647 [INFO] from application in application-akka.actor.default-dispatcher-5 - Shutting down connection pool.
+2021-03-05 21:10:05,746 [INFO] from application in application-akka.actor.default-dispatcher-5 - Creating Pool for datasource 'default'
+2021-03-05 21:10:05,755 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-5 - Database [default] connected at jdbc:mysql://localhost:3306/CS7340TEAMONELABTWO?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2021-03-05 21:10:05,836 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-5 - Application started (Dev)
+2021-03-05 21:11:25,762 [INFO] from application in application-akka.actor.default-dispatcher-5 - Shutting down connection pool.
+2021-03-05 21:11:25,848 [INFO] from application in application-akka.actor.default-dispatcher-5 - Creating Pool for datasource 'default'
+2021-03-05 21:11:25,857 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-5 - Database [default] connected at jdbc:mysql://localhost:3306/CS7340TEAMONELABTWO?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2021-03-05 21:11:25,937 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-5 - Application started (Dev)
+2021-03-05 21:12:04,164 [INFO] from application in application-akka.actor.default-dispatcher-2 - Shutting down connection pool.
+2021-03-05 21:12:04,280 [INFO] from application in application-akka.actor.default-dispatcher-2 - Creating Pool for datasource 'default'
+2021-03-05 21:12:04,290 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-2 - Database [default] connected at jdbc:mysql://localhost:3306/CS7340TEAMONELABTWO?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2021-03-05 21:12:04,362 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-2 - Application started (Dev)
+2021-03-05 21:12:44,361 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
+2021-03-05 21:12:44,442 [INFO] from application in application-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
+2021-03-05 21:12:44,450 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:mysql://localhost:3306/CS7340TEAMONELABTWO?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2021-03-05 21:12:44,520 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
+2021-03-06 02:06:42,696 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-6 housekeeper - HikariPool-6 - Thread starvation or clock leap detected (housekeeper delta=54s334ms).
+2021-03-06 03:03:56,984 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-6 housekeeper - HikariPool-6 - Thread starvation or clock leap detected (housekeeper delta=56m44s229ms).
+2021-03-06 05:05:21,554 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-6 housekeeper - HikariPool-6 - Thread starvation or clock leap detected (housekeeper delta=2h24s553ms).
+2021-03-06 07:06:16,306 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-6 housekeeper - HikariPool-6 - Thread starvation or clock leap detected (housekeeper delta=2h24s727ms).
+2021-03-06 09:07:12,272 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-6 housekeeper - HikariPool-6 - Thread starvation or clock leap detected (housekeeper delta=2h25s958ms).
+2021-03-06 10:15:22,255 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-6 housekeeper - HikariPool-6 - Thread starvation or clock leap detected (housekeeper delta=1h7m39s963ms).
+2021-03-06 12:14:32,157 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-6 housekeeper - HikariPool-6 - Thread starvation or clock leap detected (housekeeper delta=20m39s43ms).
+2021-03-06 14:09:08,594 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-6 housekeeper - HikariPool-6 - Thread starvation or clock leap detected (housekeeper delta=1h54m36s439ms).

@@ -3,6 +3,16 @@
 
 # --- !Ups
 
+create table conference (
+  cid                           bigint auto_increment not null,
+  name                          varchar(250)NOT NULL DEFAULT '',
+  location                      varchar(250)NOT NULL DEFAULT '',
+  year                          INT DEFAULT 0000,
+  x                             DOUBLE DEFAULT 0000,
+  y                             DOUBLE DEFAULT 0000,
+  constraint pk_conference primary key (cid)
+);
+
 create table pub_info (
   pid                           bigint auto_increment not null,
   title                         varchar(250)NOT NULL DEFAULT '',
@@ -28,6 +38,8 @@ create table pub_info (
 
 
 # --- !Downs
+
+drop table if exists conference;
 
 drop table if exists pub_info;
 

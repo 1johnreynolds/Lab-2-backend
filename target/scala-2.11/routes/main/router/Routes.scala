@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/beichenhu/Desktop/Service-Oriented Computing /Lab2/backend/Lab-2-backend/conf/routes
-// @DATE:Wed Mar 03 16:12:11 CST 2021
+// @DATE:Fri Mar 05 19:49:32 CST 2021
 
 package router
 
@@ -49,6 +49,7 @@ class Routes(
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """query2Response""", """controllers.PubController.partOneQueryTwo()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """query3Response""", """controllers.PubController.partOneQueryThree()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """query4Response""", """controllers.PubController.partOneQueryFour()"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """query5Response""", """controllers.PubController.partOneQueryFive()"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -141,7 +142,7 @@ class Routes(
     )
   )
 
-  // @LINE:22
+  // @LINE:21
   private[this] lazy val controllers_PubController_partOneQueryFour5_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("query4Response")))
   )
@@ -155,6 +156,23 @@ class Routes(
       "POST",
       """""",
       this.prefix + """query4Response"""
+    )
+  )
+
+  // @LINE:23
+  private[this] lazy val controllers_PubController_partOneQueryFive6_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("query5Response")))
+  )
+  private[this] lazy val controllers_PubController_partOneQueryFive6_invoker = createInvoker(
+    PubController_1.partOneQueryFive(),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.PubController",
+      "partOneQueryFive",
+      Nil,
+      "POST",
+      """""",
+      this.prefix + """query5Response"""
     )
   )
 
@@ -191,10 +209,16 @@ class Routes(
         controllers_PubController_partOneQueryThree4_invoker.call(PubController_1.partOneQueryThree())
       }
   
-    // @LINE:22
+    // @LINE:21
     case controllers_PubController_partOneQueryFour5_route(params) =>
       call { 
         controllers_PubController_partOneQueryFour5_invoker.call(PubController_1.partOneQueryFour())
+      }
+  
+    // @LINE:23
+    case controllers_PubController_partOneQueryFive6_route(params) =>
+      call { 
+        controllers_PubController_partOneQueryFive6_invoker.call(PubController_1.partOneQueryFive())
       }
   }
 }

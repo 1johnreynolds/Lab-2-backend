@@ -203,23 +203,50 @@ public class PubController extends Controller {
                     ObjectNode res = Json.newObject();
                     res.put("author",(String) pubs.get("author"));
 
-//                        res.put("title", pubs.title);
-//                        res.put("mdate", pubs.mdate);
-//                        res.put("author", pubs.author);
-//                        res.put("author_list", pubs.author_list);
-//                        res.put("article_key", pubs.article_key);
-//                        res.put("editor", pubs.editors);
-//                        res.put("pages", pubs.pages);
-//                        res.put("ee", pubs.ee);
-//                        res.put("pub_url", pubs.pub_url);
-//                        res.put("journal", pubs.journal);
-//                        res.put("book_title", pubs.book_title);
-//                        res.put("volume", pubs.volume);
-//                        res.put("pub_number", pubs.pub_number);
-//                        res.put("publisher", pubs.publisher);
-//                        res.put("isbn", pubs.isbn);
-//                        res.put("series", pubs.series);
-//                        res.put("cross_ref", pubs.cross_ref);
+                    System.out.println(res);
+//                      reslist.put(Integer.toString(i),res.toString());
+                    reslist.add(res);
+                }
+                System.out.println(reslist);
+                return ok(reslist.toString());
+            } else {
+                System.out.println(reslist.toString());
+                return ok("null");
+            }
+        }
+        catch (Exception e) {
+            return ok("false");
+        }
+    }
+
+    public Result partOneQueryFive() {
+        System.out.println("In PartOneQueryFive");
+        try {
+            JsonNode req = request().body().asJson();
+            String confName = req.get("name").asText();
+            int year = req.get("year").asInt();
+            System.out.println("Receive Conf Name: " + confName);
+            System.out.println("Receive Conf Year: " + year);
+
+            List<SqlRow> pub = Conference.findByReference_1_5(confName,year); // ( match where username and password both match )
+            System.out.println(pub.size());
+            //System.out.println(pub.book_title);
+            //ObjectNode reslist= Json.newObject();
+            List<ObjectNode> reslist= new ArrayList<>();
+
+            if (pub.get(0)!= null) {
+                System.out.println("get value");
+                int i=0;
+                for (SqlRow pubs: pub) {
+                    i++;
+                    ObjectNode res = Json.newObject();
+
+                    res.put("name",(String) pubs.get("name"));
+                    res.put("year",(int) pubs.get("year"));
+                    res.put("location",(String) pubs.get("location"));
+                    res.put("x",(Double) pubs.get("x"));
+                    res.put("y",(Double) pubs.get("y"));
+
                     System.out.println(res);
 //                      reslist.put(Integer.toString(i),res.toString());
                     reslist.add(res);

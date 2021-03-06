@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/beichenhu/Desktop/Service-Oriented Computing /Lab2/backend/Lab-2-backend/conf/routes
-// @DATE:Wed Mar 03 16:12:11 CST 2021
+// @DATE:Fri Mar 05 19:49:32 CST 2021
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -43,7 +43,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:22
+    // @LINE:21
     def partOneQueryFour: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.PubController.partOneQueryFour",
       """
@@ -59,6 +59,16 @@ package controllers.javascript {
       """
         function() {
           return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "query3Response"})
+        }
+      """
+    )
+  
+    // @LINE:23
+    def partOneQueryFive: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.PubController.partOneQueryFive",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "query5Response"})
         }
       """
     )

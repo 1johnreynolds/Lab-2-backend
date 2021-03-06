@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/beichenhu/Desktop/Service-Oriented Computing /Lab2/backend/Lab-2-backend/conf/routes
-// @DATE:Wed Mar 03 16:12:11 CST 2021
+// @DATE:Fri Mar 05 19:49:32 CST 2021
 
 
 package router {
